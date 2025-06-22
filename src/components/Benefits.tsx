@@ -18,18 +18,18 @@ const Benefits = () => {
       icon: DollarSign,
       title: t.benefitsItems.cost.title,
       description: t.benefitsItems.cost.description,
-      gradient: 'from-green-400 to-[#00C49A]'
+      gradient: 'from-green-400 to-[#007C91]'
     },
     {
       icon: Target,
       title: t.benefitsItems.predictability.title,
       description: t.benefitsItems.predictability.description,
-      gradient: 'from-blue-400 to-[#0A2240]'
+      gradient: 'from-blue-400 to-[#121C2B]'
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#0A2240] to-[#1a365d]">
+    <section className="py-20 bg-gradient-to-br from-[#121C2B] to-[#1a2332]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

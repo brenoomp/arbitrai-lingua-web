@@ -49,7 +49,7 @@ const PreLaunchForm = () => {
   };
 
   return (
-    <section id="signup" className="py-20 bg-gradient-to-br from-[#0A2240] to-[#1a365d]">
+    <section id="signup" className="py-20 bg-gradient-to-br from-[#121C2B] to-[#1a2332]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -61,7 +61,7 @@ const PreLaunchForm = () => {
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="fullName" className="text-[#0A2240] font-semibold">
+                <Label htmlFor="fullName" className="text-[#121C2B] font-semibold">
                   {t.formFields.fullName}
                 </Label>
                 <Input
@@ -69,13 +69,13 @@ const PreLaunchForm = () => {
                   type="text"
                   value={formData.fullName}
                   onChange={(e) => handleInputChange('fullName', e.target.value)}
-                  className="border-2 border-gray-200 focus:border-[#00C49A] rounded-xl p-4"
+                  className="border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4"
                   required
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="workEmail" className="text-[#0A2240] font-semibold">
+                <Label htmlFor="workEmail" className="text-[#121C2B] font-semibold">
                   {t.formFields.workEmail}
                 </Label>
                 <Input
@@ -83,14 +83,14 @@ const PreLaunchForm = () => {
                   type="email"
                   value={formData.workEmail}
                   onChange={(e) => handleInputChange('workEmail', e.target.value)}
-                  className="border-2 border-gray-200 focus:border-[#00C49A] rounded-xl p-4"
+                  className="border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4"
                   required
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="company" className="text-[#0A2240] font-semibold">
+              <Label htmlFor="company" className="text-[#121C2B] font-semibold">
                 {t.formFields.company}
               </Label>
               <Input
@@ -98,14 +98,14 @@ const PreLaunchForm = () => {
                 type="text"
                 value={formData.company}
                 onChange={(e) => handleInputChange('company', e.target.value)}
-                className="border-2 border-gray-200 focus:border-[#00C49A] rounded-xl p-4"
+                className="border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4"
                 required
               />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="jobTitle" className="text-[#0A2240] font-semibold">
+                <Label htmlFor="jobTitle" className="text-[#121C2B] font-semibold">
                   {t.formFields.jobTitle}
                 </Label>
                 <Input
@@ -113,17 +113,17 @@ const PreLaunchForm = () => {
                   type="text"
                   value={formData.jobTitle}
                   onChange={(e) => handleInputChange('jobTitle', e.target.value)}
-                  className="border-2 border-gray-200 focus:border-[#00C49A] rounded-xl p-4"
+                  className="border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4"
                   required
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="interest" className="text-[#0A2240] font-semibold">
+                <Label htmlFor="interest" className="text-[#121C2B] font-semibold">
                   {t.formFields.interest}
                 </Label>
                 <Select onValueChange={(value) => handleInputChange('interest', value)} required>
-                  <SelectTrigger className="border-2 border-gray-200 focus:border-[#00C49A] rounded-xl p-4 h-14">
+                  <SelectTrigger className="border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4 h-14">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -140,12 +140,12 @@ const PreLaunchForm = () => {
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="bg-[#00C49A] hover:bg-[#00a882] text-white text-lg px-12 py-6 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-xl disabled:opacity-50"
+                className="bg-[#007C91] hover:bg-[#006a7d] text-white text-lg px-12 py-6 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-xl disabled:opacity-50"
               >
                 {isSubmitting ? 'SUBMITTING...' : t.formButton}
               </Button>
               
-              <p className="text-sm text-gray-600 mt-6">
+              <p className="text-sm text-[#2A2A2A] mt-6">
                 {t.formCompliance}
               </p>
             </div>

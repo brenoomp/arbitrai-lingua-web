@@ -8,25 +8,25 @@ const Hero = ({ onCtaClick }: { onCtaClick: () => void }) => {
   const t = getTranslation(currentLanguage);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0A2240] via-[#0A2240] to-[#1a365d] overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#121C2B] via-[#121C2B] to-[#1a2332] overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300C49A' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23007C91' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
       </div>
       
       {/* Neural network animation */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[#00C49A]/5 animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-[#00C49A]/10 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[#007C91]/5 animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-[#007C91]/10 animate-pulse delay-1000"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
             <span className="block">{t.heroHeadline.split('. ')[0]}.</span>
-            <span className="block text-[#00C49A] mt-4">
+            <span className="block text-[#007C91] mt-4">
               {t.heroHeadline.split('. ')[1]}
             </span>
           </h1>
@@ -38,7 +38,7 @@ const Hero = ({ onCtaClick }: { onCtaClick: () => void }) => {
           <Button 
             onClick={onCtaClick}
             size="lg"
-            className="bg-[#00C49A] hover:bg-[#00a882] text-white text-lg px-12 py-6 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl"
+            className="bg-[#007C91] hover:bg-[#006a7d] text-white text-lg px-12 py-6 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl"
           >
             {t.heroCTA}
           </Button>

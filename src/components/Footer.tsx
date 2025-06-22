@@ -8,19 +8,19 @@ const Footer = () => {
   const t = getTranslation(currentLanguage);
 
   return (
-    <footer className="bg-[#0A2240] py-12">
+    <footer className="bg-[#121C2B] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-4 mb-6 md:mb-0">
             <div className="text-2xl font-bold text-white">
-              Arbitr<span className="text-[#00C49A]">AI</span>
+              Arbitr<span className="text-[#007C91]">AI</span>
             </div>
           </div>
           
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
             <a 
               href="#" 
-              className="text-gray-300 hover:text-[#00C49A] transition-colors duration-200"
+              className="text-gray-300 hover:text-[#007C91] transition-colors duration-200"
             >
               {t.privacyPolicy}
             </a>

@@ -35,10 +35,10 @@ const Problem = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#F7F9FA]">
+    <section className="py-20 bg-[#F4F6F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0A2240] mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#121C2B] mb-6">
             {t.problemTitle}
           </h2>
         </div>
@@ -49,13 +49,13 @@ const Problem = () => {
               key={index}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div className={`w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-6`}>
+              <div className={`w-16 h-16 rounded-full bg-[#D1D5D9] flex items-center justify-center mb-6`}>
                 <problem.icon className={`w-8 h-8 ${problem.color}`} />
               </div>
-              <h3 className="text-xl font-bold text-[#0A2240] mb-4">
+              <h3 className="text-xl font-bold text-[#121C2B] mb-4">
                 {problem.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-[#2A2A2A] leading-relaxed">
                 {problem.description}
               </p>
             </div>
