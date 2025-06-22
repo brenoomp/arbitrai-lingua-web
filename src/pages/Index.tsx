@@ -1,13 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useRef } from 'react';
+import { LanguageProvider } from '@/contexts/LanguageContext';
+import Hero from '@/components/Hero';
+import Problem from '@/components/Problem';
+import Solution from '@/components/Solution';
+import Benefits from '@/components/Benefits';
+import WhoIsItFor from '@/components/WhoIsItFor';
+import SEZSection from '@/components/SEZSection';
+import Pricing from '@/components/Pricing';
+import FAQ from '@/components/FAQ';
+import PreLaunchForm from '@/components/PreLaunchForm';
+import Footer from '@/components/Footer';
 
 const Index = () => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <LanguageProvider>
+      <div className="min-h-screen">
+        <Hero onCtaClick={scrollToForm} />
+        <Problem />
+        <Solution />
+        <Benefits />
+        <WhoIsItFor />
+        <SEZSection />
+        <Pricing />
+        <FAQ />
+        <div ref={formRef}>
+          <PreLaunchForm />
+        </div>
+        <Footer />
       </div>
-    </div>
+    </LanguageProvider>
   );
 };
 
