@@ -1,4 +1,3 @@
-
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslation } from '@/utils/translations';
 import { useState } from 'react';
@@ -25,14 +24,29 @@ const PreLaunchForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyQZpgrNuzOU35RVIzI0efpzYMesRQ4r1bpbXAaf-My2JfVat1Irh-mlLEHfFoVR1hd/exec';
+    const body = new URLSearchParams();
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
+    // Append form data to the body explicitly
+    body.append('fullName', formData.fullName);
+    body.append('workEmail', formData.workEmail);
+    body.append('company', formData.company);
+    body.append('jobTitle', formData.jobTitle);
+    body.append('interest', formData.interest);
+
+    try {
+      await fetch(scriptURL, {
+        method: 'POST',
+        body: body,
+        mode: 'no-cors', // Important to avoid CORS issues
+      });
+
       toast({
         title: "Success!",
         description: "You've been added to our priority access list. We'll be in touch soon!",
       });
+      
       setFormData({
         fullName: '',
         workEmail: '',
@@ -40,8 +54,17 @@ const PreLaunchForm = () => {
         jobTitle: '',
         interest: ''
       });
+
+    } catch (error) {
+      console.error('Error!', error.message);
+      toast({
+        title: "Error!",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -52,13 +75,13 @@ const PreLaunchForm = () => {
     <section id="signup" className="py-20 bg-gradient-to-br from-[#121C2B] to-[#1a2332]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             {t.formTitle}
           </h2>
         </div>
 
-        <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl">
-          <form onSubmit={handleSubmit} className="space-y-8">
+        <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-6 md:p-12 shadow-2xl">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="fullName" className="text-[#121C2B] font-semibold">
@@ -69,7 +92,7 @@ const PreLaunchForm = () => {
                   type="text"
                   value={formData.fullName}
                   onChange={(e) => handleInputChange('fullName', e.target.value)}
-                  className="border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4"
+                  className="w-full border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4 h-14 text-base"
                   required
                 />
               </div>
@@ -83,7 +106,7 @@ const PreLaunchForm = () => {
                   type="email"
                   value={formData.workEmail}
                   onChange={(e) => handleInputChange('workEmail', e.target.value)}
-                  className="border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4"
+                  className="w-full border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4 h-14 text-base"
                   required
                 />
               </div>
@@ -98,7 +121,7 @@ const PreLaunchForm = () => {
                 type="text"
                 value={formData.company}
                 onChange={(e) => handleInputChange('company', e.target.value)}
-                className="border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4"
+                className="w-full border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4 h-14 text-base"
                 required
               />
             </div>
@@ -113,7 +136,7 @@ const PreLaunchForm = () => {
                   type="text"
                   value={formData.jobTitle}
                   onChange={(e) => handleInputChange('jobTitle', e.target.value)}
-                  className="border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4"
+                  className="w-full border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4 h-14 text-base"
                   required
                 />
               </div>
@@ -123,7 +146,7 @@ const PreLaunchForm = () => {
                   {t.formFields.interest}
                 </Label>
                 <Select onValueChange={(value) => handleInputChange('interest', value)} required>
-                  <SelectTrigger className="border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4 h-14">
+                  <SelectTrigger className="w-full border-2 border-[#D1D5D9] focus:border-[#007C91] rounded-xl p-4 h-14 text-base">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -136,11 +159,11 @@ const PreLaunchForm = () => {
               </div>
             </div>
 
-            <div className="text-center">
+            <div className="text-center pt-4">
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="bg-[#007C91] hover:bg-[#006a7d] text-white text-lg px-12 py-6 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-xl disabled:opacity-50"
+                className="w-full md:w-auto bg-[#007C91] hover:bg-[#006a7d] text-white text-lg px-12 py-6 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-xl disabled:opacity-50"
               >
                 {isSubmitting ? 'SUBMITTING...' : t.formButton}
               </Button>

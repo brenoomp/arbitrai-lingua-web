@@ -1,7 +1,5 @@
-
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslation } from '@/utils/translations';
-import LanguageSwitcher from './LanguageSwitcher';
 
 const Footer = () => {
   const { currentLanguage } = useLanguage();
@@ -12,9 +10,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-4 mb-6 md:mb-0">
-            <div className="text-2xl font-bold text-white">
-              Arbitr<span className="text-[#007C91]">AI</span>
-            </div>
+            <a href="/" className="flex items-center space-x-2">
+              <img className="h-8 w-auto" src="/Arbitrai-logo-white.png" alt="ArbitrAI Logo" />
+              <div className="text-2xl font-bold text-white">
+                Arbitr<span className="text-[#007C91]">AI</span>
+              </div>
+            </a>
           </div>
           
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
@@ -24,7 +25,6 @@ const Footer = () => {
             >
               {t.privacyPolicy}
             </a>
-            <LanguageSwitcher />
           </div>
         </div>
         

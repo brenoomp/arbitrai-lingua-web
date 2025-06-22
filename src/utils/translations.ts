@@ -1,4 +1,3 @@
-
 export type Language = 'en' | 'pt' | 'es';
 
 export interface Translation {
@@ -145,23 +144,43 @@ export const translations: Record<Language, Translation> = {
     pricingTitle: "No Surprises. Fair Cost Tied to Success.",
     pricingDescription: "Pay only when disputes are resolved. Our transparent pricing model aligns our success with yours, eliminating the unpredictable costs of traditional legal processes.",
     
-    faqTitle: "Your Questions, Answered.",
+    faqTitle: "❓ Frequently Asked Questions (FAQ)",
     faqItems: [
       {
-        question: "How does ArbitrAI ensure fair and unbiased decisions?",
-        answer: "ArbitrAI uses advanced AI algorithms trained on thousands of legal precedents and arbitration cases. The system applies consistent rules and principles, eliminating human bias while ensuring decisions are based on established legal frameworks."
+        question: "1. What is ArbitrAI?",
+        answer: "ArbitrAI is a digital dispute resolution platform powered by artificial intelligence. It conducts the entire arbitration process, from notification to final decision, in a faster, more affordable, and more efficient way than traditional methods."
       },
       {
-        question: "Is ArbitrAI legally binding?",
-        answer: "Yes, ArbitrAI decisions are legally binding arbitration awards, enforceable under international arbitration conventions including the New York Convention, recognized in over 160 countries."
+        question: "2. Does the AI's decision have legal value?",
+        answer: "Yes, as long as both parties have previously signed an <strong>arbitration clause</strong> agreeing to resolve disputes through ArbitrAI. Once accepted, the AI's decision can be formalized as an <strong>extrajudicial enforceable title</strong>."
       },
       {
-        question: "What types of disputes can ArbitrAI handle?",
-        answer: "ArbitrAI specializes in commercial disputes, contract breaches, intellectual property conflicts, and business partnership disagreements. The platform is designed for complex B2B disputes that require sophisticated analysis."
+        question: "3. How is the AI's impartiality ensured?",
+        answer: "ArbitrAI's models are trained on legal doctrine, case law, and best arbitration practices. All decisions can be reviewed by qualified human arbitrators or a partner arbitration chamber, ensuring fairness and neutrality."
       },
       {
-        question: "How secure is the ArbitrAI platform?",
-        answer: "Security is paramount. ArbitrAI uses enterprise-grade encryption, secure cloud infrastructure, and complies with international data protection standards including GDPR and SOC 2 Type II certification."
+        question: "4. Do I need a lawyer to use the platform?",
+        answer: "Legal representation is not required, especially for consumer-related disputes. However, for more complex or high-value cases, legal assistance is recommended."
+      },
+      {
+        question: "5. What if the other party refuses to participate?",
+        answer: "Arbitration through ArbitrAI requires both parties to agree via a pre-existing arbitration clause. If the notified party refuses, arbitration will not proceed, though this may have contractual or legal consequences."
+      },
+      {
+        question: "6. What types of disputes can be resolved on the platform?",
+        answer: "ArbitrAI currently handles:\n- <strong>High-value consumer disputes</strong>\n- <strong>Corporate and shareholder conflicts</strong> (with arbitration clause)\n- Disputes within <strong>Special Economic or Digital Zones</strong>\n\nOther types of disputes may be added in the future."
+      },
+      {
+        question: "7. How long does it take to get a decision?",
+        answer: "It depends on the complexity of the case and the parties' responses. However, once the instruction phase is complete, <strong>the AI will issue a reasoned decision within 5 hours.</strong>"
+      },
+      {
+        question: "8. Can I propose a settlement through the platform?",
+        answer: "Yes. At any point, either party can propose a settlement. If accepted, the process is closed. For AI-assisted settlements, a <strong>1.5% fee</strong> applies based on the settlement value."
+      },
+      {
+        question: "9. Can the AI decision be challenged?",
+        answer: "Yes. After the decision is issued, parties can request:\n- <strong>A review by a human arbitrator</strong>\n- <strong>An appeal to a partner arbitration chamber</strong>"
       }
     ],
     
@@ -255,23 +274,43 @@ export const translations: Record<Language, Translation> = {
     pricingTitle: "Sem surpresas. Custo justo e atrelado ao sucesso.",
     pricingDescription: "Pague apenas quando disputas forem resolvidas. Nosso modelo de preços transparente alinha nosso sucesso ao seu, eliminando os custos imprevisíveis dos processos jurídicos tradicionais.",
     
-    faqTitle: "Suas dúvidas, respondidas.",
+    faqTitle: "❓ Perguntas Frequentes (FAQ)",
     faqItems: [
       {
-        question: "Como a ArbitrAI garante decisões justas e imparciais?",
-        answer: "A ArbitrAI usa algoritmos avançados de IA treinados em milhares de precedentes legais e casos de arbitragem. O sistema aplica regras e princípios consistentes, eliminando vieses humanos enquanto garante que decisões sejam baseadas em frameworks jurídicos estabelecidos."
+        question: "1. O que é ArbitrAI?",
+        answer: "ArbitrAI é uma plataforma digital de resolução de disputas alimentada por inteligência artificial. Ela conduz todo o processo de arbitragem, desde a notificação até a decisão final, de forma mais rápida, acessível e eficiente que os métodos tradicionais."
       },
       {
-        question: "As decisões da ArbitrAI são legalmente vinculantes?",
-        answer: "Sim, as decisões da ArbitrAI são sentenças arbitrais legalmente vinculantes, executáveis sob convenções internacionais de arbitragem incluindo a Convenção de Nova York, reconhecida em mais de 160 países."
+        question: "2. A decisão da IA tem valor legal?",
+        answer: "Sim, desde que ambas as partes tenham previamente assinado uma <strong>cláusula arbitral</strong> concordando em resolver disputas através da ArbitrAI. Uma vez aceita, a decisão da IA pode ser formalizada como um <strong>título extrajudicial executivo</strong>."
       },
       {
-        question: "Que tipos de disputas a ArbitrAI pode resolver?",
-        answer: "A ArbitrAI se especializa em disputas comerciais, quebras de contrato, conflitos de propriedade intelectual e desentendimentos de parceria empresarial. A plataforma é projetada para disputas B2B complexas que requerem análise sofisticada."
+        question: "3. Como é garantida a imparcialidade da IA?",
+        answer: "Os modelos da ArbitrAI são treinados em doutrina legal, jurisprudência e melhores práticas de arbitragem. Todas as decisões podem ser revisadas por árbitros humanos qualificados ou uma câmara de arbitragem parceira, garantindo justiça e neutralidade."
       },
       {
-        question: "Quão segura é a plataforma ArbitrAI?",
-        answer: "Segurança é fundamental. A ArbitrAI usa criptografia de nível empresarial, infraestrutura em nuvem segura e cumpre padrões internacionais de proteção de dados incluindo GDPR e certificação SOC 2 Tipo II."
+        question: "4. Preciso de um advogado para usar a plataforma?",
+        answer: "Representação legal não é obrigatória, especialmente para disputas relacionadas ao consumidor. No entanto, para casos mais complexos ou de alto valor, a assistência jurídica é recomendada."
+      },
+      {
+        question: "5. E se a outra parte se recusar a participar?",
+        answer: "A arbitragem através da ArbitrAI requer que ambas as partes concordem através de uma cláusula arbitral pré-existente. Se a parte notificada se recusar, a arbitragem não prosseguirá, embora isso possa ter consequências contratuais ou legais."
+      },
+      {
+        question: "6. Que tipos de disputas podem ser resolvidas na plataforma?",
+        answer: "A ArbitrAI atualmente trata:\n- <strong>Disputas de alto valor com consumidores</strong>\n- <strong>Conflitos corporativos e entre acionistas</strong> (com cláusula arbitral)\n- Disputas dentro de <strong>Zonas Econômicas Especiais ou Digitais</strong>\n\nOutros tipos de disputas podem ser adicionados no futuro."
+      },
+      {
+        question: "7. Quanto tempo leva para obter uma decisão?",
+        answer: "Depende da complexidade do caso e das respostas das partes. No entanto, uma vez que a fase de instrução esteja completa, <strong>a IA emitirá uma decisão fundamentada em 5 horas.</strong>"
+      },
+      {
+        question: "8. Posso propor um acordo através da plataforma?",
+        answer: "Sim. A qualquer momento, qualquer parte pode propor um acordo. Se aceito, o processo é encerrado. Para acordos assistidos por IA, uma <strong>taxa de 1,5%</strong> se aplica com base no valor do acordo."
+      },
+      {
+        question: "9. A decisão da IA pode ser contestada?",
+        answer: "Sim. Após a decisão ser emitida, as partes podem solicitar:\n- <strong>Uma revisão por um árbitro humano</strong>\n- <strong>Um recurso para uma câmara de arbitragem parceira</strong>"
       }
     ],
     
@@ -365,23 +404,43 @@ export const translations: Record<Language, Translation> = {
     pricingTitle: "Sin sorpresas. Un costo justo y vinculado al éxito.",
     pricingDescription: "Pague solo cuando las disputas se resuelvan. Nuestro modelo de precios transparente alinea nuestro éxito con el suyo, eliminando los costos impredecibles de los procesos legales tradicionales.",
     
-    faqTitle: "Sus preguntas, respondidas.",
+    faqTitle: "❓ Preguntas Frecuentes (FAQ)",
     faqItems: [
       {
-        question: "¿Cómo garantiza ArbitrAI decisiones justas e imparciales?",
-        answer: "ArbitrAI utiliza algoritmos avanzados de IA entrenados en miles de precedentes legales y casos de arbitraje. El sistema aplica reglas y principios consistentes, eliminando sesgos humanos mientras garantiza que las decisiones se basen en marcos legales establecidos."
+        question: "1. ¿Qué es ArbitrAI?",
+        answer: "ArbitrAI es una plataforma digital de resolución de disputas impulsada por inteligencia artificial. Conduce todo el proceso de arbitraje, desde la notificación hasta la decisión final, de una manera más rápida, asequible y eficiente que los métodos tradicionales."
       },
       {
-        question: "¿Son legalmente vinculantes las decisiones de ArbitrAI?",
-        answer: "Sí, las decisiones de ArbitrAI son laudos arbitrales legalmente vinculantes, ejecutables bajo convenciones internacionales de arbitraje incluyendo la Convención de Nueva York, reconocida en más de 160 países."
+        question: "2. ¿La decisión de la IA tiene valor legal?",
+        answer: "Sí, siempre que ambas partes hayan firmado previamente una <strong>cláusula arbitral</strong> acordando resolver disputas a través de ArbitrAI. Una vez aceptada, la decisión de la IA puede ser formalizada como un <strong>título extrajudicial ejecutivo</strong>."
       },
       {
-        question: "¿Qué tipos de disputas puede manejar ArbitrAI?",
-        answer: "ArbitrAI se especializa en disputas comerciales, incumplimientos de contrato, conflictos de propiedad intelectual y desacuerdos de asociación empresarial. La plataforma está diseñada para disputas B2B complejas que requieren análisis sofisticado."
+        question: "3. ¿Cómo se garantiza la imparcialidad de la IA?",
+        answer: "Los modelos de ArbitrAI están entrenados en doctrina legal, jurisprudencia y mejores prácticas de arbitraje. Todas las decisiones pueden ser revisadas por árbitros humanos calificados o una cámara de arbitraje asociada, garantizando justicia y neutralidad."
       },
       {
-        question: "¿Qué tan segura es la plataforma ArbitrAI?",
-        answer: "La seguridad es fundamental. ArbitrAI utiliza cifrado de nivel empresarial, infraestructura en la nube segura y cumple con estándares internacionales de protección de datos incluyendo GDPR y certificación SOC 2 Tipo II."
+        question: "4. ¿Necesito un abogado para usar la plataforma?",
+        answer: "La representación legal no es requerida, especialmente para disputas relacionadas con el consumidor. Sin embargo, para casos más complejos o de alto valor, se recomienda asistencia legal."
+      },
+      {
+        question: "5. ¿Qué pasa si la otra parte se niega a participar?",
+        answer: "El arbitraje a través de ArbitrAI requiere que ambas partes estén de acuerdo a través de una cláusula arbitral preexistente. Si la parte notificada se niega, el arbitraje no procederá, aunque esto puede tener consecuencias contractuales o legales."
+      },
+      {
+        question: "6. ¿Qué tipos de disputas se pueden resolver en la plataforma?",
+        answer: "ArbitrAI actualmente maneja:\n- <strong>Disputas de alto valor con consumidores</strong>\n- <strong>Conflictos corporativos y entre accionistas</strong> (con cláusula arbitral)\n- Disputas dentro de <strong>Zonas Económicas Especiales o Digitales</strong>\n\nOtros tipos de disputas pueden ser agregados en el futuro."
+      },
+      {
+        question: "7. ¿Cuánto tiempo toma obtener una decisión?",
+        answer: "Depende de la complejidad del caso y las respuestas de las partes. Sin embargo, una vez que la fase de instrucción esté completa, <strong>la IA emitirá una decisión fundamentada en 5 horas.</strong>"
+      },
+      {
+        question: "8. ¿Puedo proponer un acuerdo a través de la plataforma?",
+        answer: "Sí. En cualquier momento, cualquiera de las partes puede proponer un acuerdo. Si es aceptado, el proceso se cierra. Para acuerdos asistidos por IA, se aplica una <strong>tarifa del 1.5%</strong> basada en el valor del acuerdo."
+      },
+      {
+        question: "9. ¿Se puede impugnar la decisión de la IA?",
+        answer: "Sí. Después de que se emita la decisión, las partes pueden solicitar:\n- <strong>Una revisión por un árbitro humano</strong>\n- <strong>Un recurso a una cámara de arbitraje asociada</strong>"
       }
     ],
     
