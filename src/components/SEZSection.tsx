@@ -6,12 +6,7 @@ const SEZSection = () => {
   const { currentLanguage } = useLanguage();
   const t = getTranslation(currentLanguage);
 
-  const features = [
-    { icon: Globe, text: "Global Recognition" },
-    { icon: TrendingUp, text: "Investment Attraction" },
-    { icon: Shield, text: "Legal Certainty" },
-    { icon: Zap, text: "Rapid Deployment" }
-  ];
+  const featureIcons = [Globe, TrendingUp, Shield, Zap];
 
   return (
     <section className="py-20 bg-white">
@@ -26,14 +21,17 @@ const SEZSection = () => {
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#007C91]/10 rounded-full flex items-center justify-center">
-                    <feature.icon className="w-5 h-5 text-[#007C91]" />
+              {t.sezFeatures.map((feature, index) => {
+                const Icon = featureIcons[index];
+                return (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="flex-shrink-0 w-10 h-10 bg-[#007C91]/10 rounded-full flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-[#007C91]" />
+                    </div>
+                    <span className="font-semibold text-[#121C2B]">{feature.title}</span>
                   </div>
-                  <span className="font-semibold text-[#121C2B]">{feature.text}</span>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 

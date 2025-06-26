@@ -43,10 +43,14 @@ export interface Translation {
   // SEZ Section
   sezTitle: string;
   sezDescription: string;
+  sezFeatures: Array<{ title: string }>;
   
   // Pricing Section
   pricingTitle: string;
   pricingDescription: string;
+  pricingCardTitle: string;
+  pricingCardFeatures: Array<string>;
+  pricingCardNote: string;
   
   // FAQ Section
   faqTitle: string;
@@ -155,9 +159,24 @@ export const translations: Record<Language, Translation> = {
     
     sezTitle: "The OS for Modern Governance: Build Your Zone on a Foundation of Trust and Agility.",
     sezDescription: "A Special Economic Zone's greatest asset is its ability to attract global investment and talent. But investors demand more than tax incentives—they need assurance that disputes will be resolved quickly, fairly, and predictably. ArbitrAI is the turnkey infrastructure that signals to the world your zone is built for the future of commerce.",
+    sezFeatures: [
+      { title: "Global Recognition" },
+      { title: "Investment Attraction" },
+      { title: "Legal Certainty" },
+      { title: "Rapid Deployment" }
+    ],
     
     pricingTitle: "No Surprises. Fair Cost Tied to Success.",
     pricingDescription: "Pay only when disputes are resolved. Our transparent pricing model aligns our success with yours, eliminating the unpredictable costs of traditional legal processes.",
+    pricingCardTitle: "Success-Based Pricing",
+    pricingCardFeatures: [
+      "No upfront costs or hidden fees",
+      "Pay only when disputes are resolved",
+      "Transparent pricing structure",
+      "Scales with your business needs",
+      "No long-term contracts required"
+    ],
+    pricingCardNote: "Detailed pricing will be shared with priority access members",
     
     faqTitle: "❓ Frequently Asked Questions (FAQ)",
     faqItems: [
@@ -252,16 +271,16 @@ export const translations: Record<Language, Translation> = {
     solutionDescription: "Uma plataforma revolucionária que combina inteligência artificial com princípios estabelecidos de arbitragem para entregar resolução de disputas mais rápida, previsível e econômica.",
     solutionBenefits: [
       {
-        title: "Lightning Fast",
-        description: "AI-powered analysis delivers decisions in weeks, not years."
+        title: "Rápido como um Raio",
+        description: "Análise com IA entrega decisões em semanas, não anos."
       },
       {
-        title: "Intelligent Decisions",
-        description: "Advanced algorithms trained on thousands of legal precedents."
+        title: "Decisões Inteligentes",
+        description: "Algoritmos avançados treinados em milhares de precedentes jurídicos."
       },
       {
-        title: "Legally Binding",
-        description: "Enforceable decisions recognized internationally."
+        title: "Legalmente Vinculante",
+        description: "Decisões executáveis reconhecidas internacionalmente."
       }
     ],
     
@@ -299,9 +318,24 @@ export const translations: Record<Language, Translation> = {
     
     sezTitle: "O SO para a Governança Moderna: Construa sua Zona sobre uma base de Confiança e Agilidade.",
     sezDescription: "O maior ativo de uma Zona Econômica Especial é sua capacidade de atrair investimentos e talentos globais. Mas investidores exigem mais que incentivos fiscais—eles precisam de garantias de que disputas serão resolvidas rapidamente, de forma justa e previsível. A ArbitrAI é a infraestrutura completa que sinaliza ao mundo que sua zona foi construída para o futuro do comércio.",
+    sezFeatures: [
+      { title: "Reconhecimento Global" },
+      { title: "Atração de Investimentos" },
+      { title: "Segurança Jurídica" },
+      { title: "Implantação Rápida" }
+    ],
     
     pricingTitle: "Sem surpresas. Custo justo e atrelado ao sucesso.",
     pricingDescription: "Pague apenas quando disputas forem resolvidas. Nosso modelo de preços transparente alinha nosso sucesso ao seu, eliminando os custos imprevisíveis dos processos jurídicos tradicionais.",
+    pricingCardTitle: "Precificação por Sucesso",
+    pricingCardFeatures: [
+      "Sem custos iniciais ou taxas ocultas",
+      "Pague apenas quando as disputas forem resolvidas",
+      "Estrutura de preços transparente",
+      "Escalável conforme a necessidade do seu negócio",
+      "Sem contratos de longo prazo"
+    ],
+    pricingCardNote: "Detalhes completos de preços serão compartilhados com membros de acesso prioritário",
     
     faqTitle: "❓ Perguntas Frequentes (FAQ)",
     faqItems: [
@@ -396,16 +430,16 @@ export const translations: Record<Language, Translation> = {
     solutionDescription: "Una plataforma revolucionaria que combina inteligencia artificial con principios establecidos de arbitraje para entregar resolución de disputas más rápida, predecible y económica.",
     solutionBenefits: [
       {
-        title: "Lightning Fast",
-        description: "AI-powered analysis delivers decisions in weeks, not years."
+        title: "Ultrarrápido",
+        description: "El análisis con IA entrega decisiones en semanas, no años."
       },
       {
-        title: "Intelligent Decisions",
-        description: "Advanced algorithms trained on thousands of legal precedents."
+        title: "Decisiones Inteligentes",
+        description: "Algoritmos avanzados entrenados en miles de precedentes legales."
       },
       {
-        title: "Legally Binding",
-        description: "Enforceable decisions recognized internationally."
+        title: "Legalmente Vinculante",
+        description: "Decisiones ejecutables reconocidas internacionalmente."
       }
     ],
     
@@ -443,9 +477,24 @@ export const translations: Record<Language, Translation> = {
     
     sezTitle: "El SO para la Gobernanza Moderna: Construya su Zona sobre una base de Confianza y Agilidad.",
     sezDescription: "El mayor activo de una Zona Económica Especial es su capacidad para atraer inversión y talento global. Pero los inversores exigen más que incentivos fiscales—necesitan garantías de que las disputas se resolverán rápidamente, de manera justa y predecible. ArbitrAI es la infraestructura llave en mano que le indica al mundo que su zona está construida para el futuro del comercio.",
+    sezFeatures: [
+      { title: "Reconocimiento Global" },
+      { title: "Atracción de Inversiones" },
+      { title: "Seguridad Jurídica" },
+      { title: "Implementación Rápida" }
+    ],
     
     pricingTitle: "Sin sorpresas. Un costo justo y vinculado al éxito.",
     pricingDescription: "Pague solo cuando las disputas se resuelvan. Nuestro modelo de precios transparente alinea nuestro éxito con el suyo, eliminando los costos impredecibles de los procesos legales tradicionales.",
+    pricingCardTitle: "Precios Basados en el Éxito",
+    pricingCardFeatures: [
+      "Sin costos iniciales ni tarifas ocultas",
+      "Pague solo cuando se resuelvan las disputas",
+      "Estructura de precios transparente",
+      "Escalable según las necesidades de su negocio",
+      "Sin contratos a largo plazo"
+    ],
+    pricingCardNote: "Los detalles completos de precios se compartirán con los miembros de acceso prioritario",
     
     faqTitle: "❓ Preguntas Frecuentes (FAQ)",
     faqItems: [
