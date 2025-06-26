@@ -22,6 +22,7 @@ export interface Translation {
   // Solution Section
   solutionTitle: string;
   solutionDescription: string;
+  solutionBenefits: Array<{ title: string; description: string }>;
   
   // Benefits Section
   benefitsTitle: string;
@@ -105,6 +106,20 @@ export const translations: Record<Language, Translation> = {
     
     solutionTitle: "Introducing ArbitrAI: The Intelligent Arbitration.",
     solutionDescription: "A revolutionary platform that combines artificial intelligence with established arbitration principles to deliver faster, more predictable, and cost-effective dispute resolution.",
+    solutionBenefits: [
+      {
+        title: "Lightning Fast",
+        description: "AI-powered analysis delivers decisions in weeks, not years."
+      },
+      {
+        title: "Intelligent Decisions",
+        description: "Advanced algorithms trained on thousands of legal precedents."
+      },
+      {
+        title: "Legally Binding",
+        description: "Enforceable decisions recognized internationally."
+      }
+    ],
     
     benefitsTitle: "Turn Your Legal Liabilities into a Competitive Advantage.",
     benefitsItems: {
@@ -235,6 +250,20 @@ export const translations: Record<Language, Translation> = {
     
     solutionTitle: "Apresentando ArbitrAI: A Arbitragem Inteligente.",
     solutionDescription: "Uma plataforma revolucionária que combina inteligência artificial com princípios estabelecidos de arbitragem para entregar resolução de disputas mais rápida, previsível e econômica.",
+    solutionBenefits: [
+      {
+        title: "Lightning Fast",
+        description: "AI-powered analysis delivers decisions in weeks, not years."
+      },
+      {
+        title: "Intelligent Decisions",
+        description: "Advanced algorithms trained on thousands of legal precedents."
+      },
+      {
+        title: "Legally Binding",
+        description: "Enforceable decisions recognized internationally."
+      }
+    ],
     
     benefitsTitle: "Transforme seu passivo jurídico em vantagem competitiva.",
     benefitsItems: {
@@ -365,6 +394,20 @@ export const translations: Record<Language, Translation> = {
     
     solutionTitle: "Presentando ArbitrAI: El Arbitraje Inteligente.",
     solutionDescription: "Una plataforma revolucionaria que combina inteligencia artificial con principios establecidos de arbitraje para entregar resolución de disputas más rápida, predecible y económica.",
+    solutionBenefits: [
+      {
+        title: "Lightning Fast",
+        description: "AI-powered analysis delivers decisions in weeks, not years."
+      },
+      {
+        title: "Intelligent Decisions",
+        description: "Advanced algorithms trained on thousands of legal precedents."
+      },
+      {
+        title: "Legally Binding",
+        description: "Enforceable decisions recognized internationally."
+      }
+    ],
     
     benefitsTitle: "Convierta sus pasivos legales en una ventaja competitiva.",
     benefitsItems: {
